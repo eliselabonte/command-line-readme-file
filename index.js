@@ -1,30 +1,31 @@
 const fs = require("fs");
-const axios = require("axios");
 const inquirer = require("inquirer");
-const markdown = require("./utils/generateMarkdown");
+// const axios = require("axios");
+// const markdown = require("./utils/generateMarkdown");
 
-const questions =   [
-    {   name:  'title',
-        message: 'what is your project\'s title?'
-    },
-    {   name: 'description',
-        message: 'enter a brief project description'
-    },
-    {   name: 'installation',
-        message:'enter a project installation instructions'
-    },
-    {   name:'usage',
-        message: 'describe the intended usage of this project'
-    },
-    {   name:'license',
-        message: 'enter your project license (if none, hit enter)'
-    },
-    {   name:'contributing',
-        message: 'who are the project contributors?'
-    },
-    {   name:'tests',
-        message: 'enter test instructions'
-    }
+const questionsForUser =   [
+    
+        {   name:  'title',
+            message: 'what is your project\'s title?'
+        },
+        {   name: 'description',
+            message: 'enter a brief project description'
+        },
+        {   name: 'installation',
+            message:'enter a project installation instructions'
+        },
+        {   name:'usage',
+            message: 'describe the intended usage of this project'
+        },
+        {   name:'license',
+            message: 'enter your project license (if none, hit enter)'
+        },
+        {   name:'contributing',
+            message: 'who are the project contributors?'
+        },
+        {   name:'tests',
+            message: 'enter test instructions'
+        }
 ]
 
 // TODO: Create a function that returns a license badge based on which license is passed in
@@ -67,28 +68,39 @@ function generateMarkdown(data) {
     -[contributing](#contributing)
     -[tests](#tests)
 
-    ${data.username}
     ##username:
+        ${data.username}
 
-        ${data.description}
     ##description:
+        ${data.description}
 
-        ${data.installation}
     ##installation:
+        ${data.installation}
 
-        ${data.usage}
     ##usage:
+        ${data.usage}
 
-        ${data.license}
     ##license:
+        ${data.license}
 
-        ${data.contributing}
     ##contributing:
+        ${data.contributing}
 
-        ${data.tests}
     ##tests:
+        ${data.tests}
 
     `;
-}
+};
 
-module.exports = generateMarkdown;
+function init() {
+    inquirer.prompt(questionsForUser)
+    .then((answersFromUser) =>   {
+        console.log('working on it')
+        const writeReadMe = generateMarkdown(answersFromUser);
+
+        fs.writeFile('readme.md', writeReadMe, (err) =>
+        err ? console.log(err) : console.log('readme.md created successfully'))
+    })
+};
+
+init();
