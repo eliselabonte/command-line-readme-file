@@ -26,6 +26,11 @@ const questionsForUser =   [
             name:'license',
             message: 'enter your project license (if none, hit enter)'
         },
+        {   type: 'list',
+            choices: ['red', 'orange', 'green', 'blue'],
+            name:'color',
+            message: 'select your preferred badge color'
+        },
         {   type: 'input',
             name:'contributing',
             message: 'who are the project contributors?'
