@@ -1,6 +1,5 @@
 
   # Generate README
-  ![gitHub license](https://img.shields.io/badge/license-MIT-green)
 
   ## Table of Contents
 
@@ -9,11 +8,8 @@
   * [installation](#installation)
 
   * [usage](#usage)
-
   
-        
-* [license](#license)
-
+  * [license](#license)
 
   * [contributing](#contributing)
 
@@ -30,12 +26,12 @@
 
   ## license:
 
-      this repository is using the MIT license.
+      this repository is using the none license.
 
   ## contributing:
       Elise
 
   ## tests:
-      none
+      
 
   

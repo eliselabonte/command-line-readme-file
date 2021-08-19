@@ -19,6 +19,10 @@ function renderLicenseSection(license) {
       this repository is using the ${license} license.`;
   }
 
+  else  {
+    return '';
+  }
+
 }
 
 function generateMarkdown(data) {
