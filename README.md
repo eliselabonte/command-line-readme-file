@@ -1,6 +1,6 @@
 
-  # ss
-  ![gitHub license](https://img.shields.io/badge/license-MIT-red)
+  # Generate README
+  ![gitHub license](https://img.shields.io/badge/license-MIT-green)
 
   ## Table of Contents
 
@@ -20,22 +20,22 @@
   * [tests](#tests)
 
   ## description:
-      ss
+      this desktop app creates a custom README.md file from the command line by utilizing information entered by the user.
 
   ## installation:
-      ss
+      open the application from the command line using nodejs, then answer the question prompts.
 
   ## usage:
-      ss
+      create a custom README.md file for a project.
 
   ## license:
 
       this repository is using the MIT license.
 
   ## contributing:
-      ff
+      Elise
 
   ## tests:
-      ff
+      none
 
   
